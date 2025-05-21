@@ -4,29 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BraNtswembu - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Hello, I am BraNtswembu!</h1>
-        <p>Welcome to my portfolio website</p>
-    </header> 
-    
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am a passionate web developer. I started coding in the FNB App Academy 2025</p>
-    </section>
-    
-    <section class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>Portfolio Website</li>
-            <li>Aviator Predictor</li>
-            <li>Weather App</li>
-        </ul>
-    </section>
+        <div class="container">
+            <h1>BraNtswembu</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+     <main>
+        <section id="home">
+            <h2>Hello, I am BraNtswembu!</h2>
+            <p>Welcome to my portfolio website</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="https://via.placeholder.com/150" alt="BraNtswembu Profile">
+                <p>I am a passionate web developer. I started coding in the FNB App Academy 2025, where I learned to build dynamic and user-friendly websites. My mission is to create innovative digital solutions.</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Portfolio Website</h3>
+                    <p>A personal portfolio showcasing my skills and projects.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Aviator Predictor</h3>
+                    <p>An app predicting aviator game outcomes using algorithms.</p>
+                    <a href="#">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>Weather App</h3>
+                    <p>A weather forecasting app with real-time data integration.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>@ copyright 2025 BraNtswembu. All rights reserved Developed by BraNtswembu</p>
+        <p>© 2025 BraNtswembu. All rights reserved. Developed by BraNtswembu</p>
+        <div class="social-links">
+            <a href="#">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
